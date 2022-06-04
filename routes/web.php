@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Livewire\Gallery\Gallery;
+use App\Http\Livewire\Index\Index;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get("/", Index::class)->name("landscape.index");
+Route::get("/gallery", Gallery::class)->name("landscape.gallery");
