@@ -11,6 +11,7 @@ use Spatie\GoogleCalendar\Event;
 class AppointmentCalendar extends Component
 {
     public Appointment $appointment;
+    public $calendarDate;
     public function render()
     {
         return view('livewire.calendar.appointment-calendar');
@@ -22,20 +23,19 @@ class AppointmentCalendar extends Component
 
     public function pushAppointment(){
         // $this->validate();
-        dd($this->appointment);
-        // $date = Carbon::create($this->appointment->startDateTime, "GMT-07:00");
-        // $e = new Event();
-        // $e->name = $this->appointment->name;
-        // $e->description = $this->appointment->description;
-        // $e->startDateTime = Carbon::create($date);
-        // $e->endDateTime = Carbon::create($date);
-        // $e->location = $this->appointment->location;
-        // $optParams = [
-        //     "sendNotifications" => true
-        // ];
+        $this->appointment->startDate = $this->calendarDate;
+        $dateTime = $this->appointment->startDate."T".$this->appointment->startTime;
+        $this->appointment->startDateTime = Carbon::create($dateTime, "GMT-07:00");
+        $this->appointment->description = $this->appointment->description.". My contact: ".$this->appointment->email.", ".$this->appointment->phone;
 
-        // $e->save("insertEvent", $optParams);
-        // // $e->save();
+        Event::create([
+            'name' => $this->appointment->name,
+            'description' => $this->appointment->description,
+            'location' => $this->appointment->location,
+            'startDateTime' => $this->appointment->startDateTime,
+            'endDateTime' => $this->appointment->startDateTime,
+         ]);
+        $this->emit("created");
     }
 
     public function rules() {

@@ -7,7 +7,8 @@ class AppointmentRules {
         return [
             "appointment.name" => "required|string",
             "appointment.description" => "nullable|string",
-            "appointment.startDateTime" => "required|date",
+            "appointment.startTime" => "required|string",
+            "appointment.startDate" => "required|date",
             "appointment.location" => "required|string",
             "appointment.email" => "required|email",
             "appointment.phone" => "nullable|string"

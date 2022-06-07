@@ -31,6 +31,7 @@
     <script src="lg-js/plugins/thumbnail/lg-thumbnail.min.js"></script>
     <script src="lg-js/plugins/video/lg-video.min.js"></script>
     <script src="lg-js/plugins/zoom/lg-zoom.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
 
 </head>
 
@@ -74,6 +75,18 @@
     <script src="magnific-popup/jquery.magnific-popup.min.js"></script>
     <script src="js/easing.min.js"></script>
     <script src="js/jquery.singlePageNav.min.js"></script>
+    <script>
+        livewire.on("created", function() {
+            $(':input','#form')
+            .not(':button, :submit, :reset, :hidden')
+            .val('')
+            swal({
+                title: "The appointment was created",
+                text: "Now you can close the modal",
+                icon: "success",
+            });
+        });
+    </script>
 </body>
 
 </html>
