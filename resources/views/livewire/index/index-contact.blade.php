@@ -1,5 +1,13 @@
 <section id="contact" class="tm-section-pad-top tm-parallax-2">
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+            });
+            calendar.render();
+        });
+    </script>
     <div class="container tm-container-contact">
 
         <div class="row">
