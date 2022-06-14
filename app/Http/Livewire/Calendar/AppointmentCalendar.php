@@ -22,7 +22,7 @@ class AppointmentCalendar extends Component
     }
 
     public function pushAppointment(){
-        // $this->validate();
+        $this->validate();
         $this->appointment->startDate = $this->calendarDate;
         $dateTime = $this->appointment->startDate."T".$this->appointment->startTime;
         $this->appointment->startDateTime = Carbon::create($dateTime, "GMT-07:00");
@@ -34,7 +34,8 @@ class AppointmentCalendar extends Component
             'location' => $this->appointment->location,
             'startDateTime' => $this->appointment->startDateTime,
             'endDateTime' => $this->appointment->startDateTime,
-         ]);
+        ]);
+        $this->mount();
         $this->emit("created");
     }
 

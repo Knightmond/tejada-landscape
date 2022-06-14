@@ -78,15 +78,17 @@
     <script src="js/jquery.singlePageNav.min.js"></script>
     <script>
         livewire.on("created", function() {
-            $(':input','#form')
-            .not(':button, :submit, :reset, :hidden')
-            .val('')
+            deleteFormData();
             swal({
                 title: "The appointment was created",
                 text: "Now you can close the modal",
                 icon: "success",
             });
         });
+
+        function deleteFormData(){
+            document.getElementById("form").reset();
+        }
     </script>
 </body>
 

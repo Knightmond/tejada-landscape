@@ -8,6 +8,7 @@
             calendar.render();
         });
     </script>
+
     <div class="container tm-container-contact">
 
         <div class="row">
@@ -17,7 +18,7 @@
             </div>
 
             <div class="col-sm-12 col-md-6" id="calendar">
-                <!--Calendario-->
+                <a class="btn btn-primary" href="{{ route('landscape.appointments') }}">Make an appointment!</a>
             </div>
 
             <div class="col-sm-12 col-md-6">

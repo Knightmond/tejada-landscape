@@ -8,10 +8,9 @@ class AppointmentRules {
             "appointment.name" => "required|string",
             "appointment.description" => "nullable|string",
             "appointment.startTime" => "required|string",
-            "appointment.startDate" => "required|date",
             "appointment.location" => "required|string",
             "appointment.email" => "required|email",
-            "appointment.phone" => "nullable|string"
+            "appointment.phone" => "nullable|string|min:10"
         ];
     }
 }

@@ -64,10 +64,12 @@
                         <div class="col">
                             <label for="email">Email *</label>
                             <input class="form-control" id="email" wire:model="appointment.email" type="email" placeholder="Enter email">
+                            @error('appointment.email') <span class="text-danger">{{ $message }}</span>@enderror
                         </div>
                         <div class="col">
                             <label for="phone">Phone</label>
-                            <input class="form-control" id="phone" wire:model="appointment.phone" type="text" placeholder="Enter phone number">
+                            <input class="form-control" id="phone" maxlength="10" wire:model="appointment.phone" type="text" placeholder="Enter phone number">
+                            @error('appointment.phone') <span class="text-danger">{{ $message }}</span>@enderror
                         </div>
                     </div>
                 </div>
