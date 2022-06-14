@@ -32,6 +32,8 @@
             });
         }
 
+
+
         // Parallax function
         // Adapted based on https://codepen.io/roborich/pen/wpAsm
         var background_image_parallax = function($object, multiplier, forceSet) {
@@ -75,6 +77,8 @@
                 }
             });
         };
+
+
 
         $(function() {
             // Hero Section - Background Parallax
@@ -122,10 +126,13 @@
                 } // End if
             });
 
+
+
+
             // Pop up
             $('.tm-gallery').magnificPopup({
                 delegate: 'a',
-                type: 'image',
+                type: 'image',s
                 gallery: {
                     enabled: true
                 }
@@ -195,6 +202,7 @@
                     }
                 ]
             });
+            //here
         });
     </script>
 </div>
