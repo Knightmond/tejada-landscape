@@ -48,3 +48,4 @@
     </div>
     <a href="{{ route('landscape.gallery') }}" type="button" class=" btn-gallery ">View full gallery</a>
 </section>
+a
