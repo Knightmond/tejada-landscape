@@ -10,7 +10,6 @@
             <div class="col-12">
                 <div class="mx-auto tm-gallery-container">
                     <div class="grid tm-galler">
-
                         <figure class="effect-honey tm-gallery-item">
                             <img src="{{url("/storage/img/img1.jpg")}}" alt="Image 1" class="img-fluid">
                             <figcaption>
@@ -18,23 +17,18 @@
                             </figcaption>
                         </figure>
                         <figure class="effect-honey tm-gallery-item">
-                            <img src="{{url("/storage/img/img2.jpg")}}" alt="Image 2" class="img-fluid">
+                            <img src="{{url("/storage/img/img8.jpg")}}" alt="Image 8" class="img-fluid">
                             <figcaption>
                                 <h2><i> <span></span></i></h2>
                             </figcaption>
                         </figure>
                         <figure class="effect-honey tm-gallery-item">
-                            <img src="{{url("/storage/img/img3.jpg")}}" alt="Image 3" class="img-fluid">
+                            <img src="{{url("/storage/img/img10.jpg")}}" alt="Image 10" class="img-fluid">
                             <figcaption>
                                 <h2><i> <span></span></i></h2>
                             </figcaption>
                         </figure>
-                        <figure class="effect-honey tm-gallery-item">
-                            <img src="{{url("/storage/img/img4.jpg")}}" alt="Image 4" class="img-fluid">
-                            <figcaption>
-                                <h2><i> <span></span></i></h2>
-                            </figcaption>
-                        </figure>
+
                         <figure class="effect-honey tm-gallery-item">
                             <img src="{{url("/storage/img/img5.jpg")}}" alt="Image 5" class="img-fluid">
                             <figcaption>
@@ -48,4 +42,4 @@
     </div>
     <a href="{{ route('landscape.gallery') }}" type="button" class=" btn-gallery ">View full gallery</a>
 </section>
-a
+
