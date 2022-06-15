@@ -79,6 +79,9 @@ blockquote {
   text-align: center;
   max-width: 340px;
   display: inline-block;
+  text-align: justify;
+  color: dimgray;
+
 }
 
 .tm-content-box {
@@ -664,7 +667,12 @@ p {
 
   .tm-container-contact {
     max-width: 1063px;
+
   }
+}
+.ContactRow{
+    vertical-align: middle;
+    margin-top: 150px;
 }
 
 @media (max-width: 991px) {

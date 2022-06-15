@@ -21,7 +21,7 @@
                 <a class="btn btn-primary" href="{{ route('landscape.appointments') }}">Make an appointment!</a>
             </div>
 
-            <div class="col-sm-12 col-md-6">
+            <div class="col-sm-12 col-md-6 ContactRow">
 
                 <div class="contact-item">
                     <a rel="nofollow" href="mailto:mail@company.com" class="item-link">
