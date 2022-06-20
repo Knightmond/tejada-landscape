@@ -80,8 +80,8 @@
         livewire.on("created", function() {
             deleteFormData();
             swal({
-                title: "The appointment was created",
-                text: "Now you can close the modal",
+                title: "Success",
+                text: "The appointment was created successfully",
                 icon: "success",
             });
         });
