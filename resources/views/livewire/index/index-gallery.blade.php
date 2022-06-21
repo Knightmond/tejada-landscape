@@ -10,36 +10,19 @@
             <div class="col-12">
                 <div class="mx-auto tm-gallery-container">
                     <div class="grid tm-galler">
-                        <figure class="effect-honey tm-gallery-item">
-                            <img src="{{url("/storage/img/img1.jpg")}}" alt="Image 1" class="img-fluid">
-                            <figcaption>
-                                <h2><i> <span></span></i></h2>
-                            </figcaption>
-                        </figure>
-                        <figure class="effect-honey tm-gallery-item">
-                            <img src="{{url("/storage/img/img8.jpg")}}" alt="Image 8" class="img-fluid">
-                            <figcaption>
-                                <h2><i> <span></span></i></h2>
-                            </figcaption>
-                        </figure>
-                        <figure class="effect-honey tm-gallery-item">
-                            <img src="{{url("/storage/img/img10.jpg")}}" alt="Image 10" class="img-fluid">
-                            <figcaption>
-                                <h2><i> <span></span></i></h2>
-                            </figcaption>
-                        </figure>
-
-                        <figure class="effect-honey tm-gallery-item">
-                            <img src="{{url("/storage/img/img5.jpg")}}" alt="Image 5" class="img-fluid">
-                            <figcaption>
-                                <h2><i> <span></span></i></h2>
-                            </figcaption>
-                        </figure>
+                        @for ($i = 0; $i < 4; $i++)
+                            <figure class="effect-honey tm-gallery-item">
+                                <img style="object-fit: cover; width:250px; height:300px;" src="{{Storage::disk("public")->url($photos[$i]->picture)}}" alt="Image {{$i}}" class="img-fluid">
+                                <figcaption>
+                                    <h2><i> <span></span></i></h2>
+                                </figcaption>
+                            </figure>
+                        @endfor
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <a href="{{ route('landscape.gallery') }}" type="button" class=" btn-gallery ">View full gallery</a>
+    <a href="{{ route('landscape.gallery') }}" type="button" class=" btn-gallery mt-4">View full gallery</a>
 </section>
 

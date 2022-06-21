@@ -80,8 +80,8 @@
         livewire.on("created", function() {
             deleteFormData();
             swal({
-                title: "The appointment was created",
-                text: "Now you can close the modal",
+                title: "Success",
+                text: "The appointment was created successfully",
                 icon: "success",
             });
         });
@@ -92,10 +92,11 @@
     </script>
 </body>
 
-<!--<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/botman-web-widget@0/build/assets/css/chat.min.css">-->
+<link rel="stylesheet" type="text/css" href="https://drive.google.com/uc?export=view&id=1E2LypamsdORqOglpAcsGzB9jmMR2T4oY">
 <script>
     var botmanWidget = {
         aboutText: 'Tejada Landscape Inc',
+        title:'Helper',
         introMessage: "✋ Hello!"
     };
 </script>

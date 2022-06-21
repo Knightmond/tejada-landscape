@@ -1,9 +1,19 @@
 <section id="contact" class="tm-section-pad-top tm-parallax-2">
     <script>
+        let dates = @js($dates);
+        var allEvents = []
+        dates.forEach(element => {
+            allEvents.push({
+                "title":"Booked",
+                "start":element.startDate,
+                "color":"black"
+            })
+        });
         document.addEventListener('DOMContentLoaded', function() {
             var calendarEl = document.getElementById('calendar');
             var calendar = new FullCalendar.Calendar(calendarEl, {
                 initialView: 'dayGridMonth',
+                events: allEvents
             });
             calendar.render();
         });

@@ -12,8 +12,10 @@ class AppointmentCalendar extends Component
 {
     public Appointment $appointment;
     public $calendarDate;
+    public $dates;
     public function render()
     {
+        $this->dates = Appointment::all(["startDate"]);
         return view('livewire.calendar.appointment-calendar');
     }
 
@@ -27,7 +29,7 @@ class AppointmentCalendar extends Component
         $dateTime = $this->appointment->startDate."T".$this->appointment->startTime;
         $this->appointment->startDateTime = Carbon::create($dateTime, "GMT-07:00");
         $this->appointment->description = $this->appointment->description.". My contact: ".$this->appointment->email.", ".$this->appointment->phone;
-
+        $this->appointment->save();
         Event::create([
             'name' => $this->appointment->name,
             'description' => $this->appointment->description,
@@ -37,6 +39,7 @@ class AppointmentCalendar extends Component
         ]);
         $this->mount();
         $this->emit("created");
+        return redirect(route("landscape.index"));
     }
 
     public function rules() {

@@ -1,19 +1,45 @@
 <div class="container">
     <script>
+        let flag;
+        let dates = @js($dates);
+        var allEvents = []
+        dates.forEach(element => {
+            allEvents.push({
+                "title":"Booked",
+                "start":element.startDate,
+                "color":"black"
+            })
+        });
         document.addEventListener('DOMContentLoaded', function() {
             var calendarEl = document.getElementById('calendar');
             var calendar = new FullCalendar.Calendar(calendarEl, {
                 initialView: 'dayGridMonth',
-                validRange: {
-                    "start": Date.now()
-                },
                 dateClick: function(info){
-                    jQuery("#modalBtn").click();
-                    jQuery("#formModalLabel").html("Date: "+info.dateStr);
-                    @this.calendarDate = info.dateStr;
+                    flag = false
+                    let d = new Date().setHours(0,0,0,0);
+                    if (info.date >= d) {
+                        checkEventsDates(info.dateStr)
+                        if (flag == true) {
+                            alert("Day already Booked, please select another day")
+                        } else {
+                            jQuery("#modalBtn").click();
+                            jQuery("#formModalLabel").html("Date: "+info.dateStr);
+                            @this.calendarDate = info.dateStr;
+                        }
+                    } else {
+                        alert("please select a more recent date")
+                    }
                 },
+                events:allEvents
             });
             calendar.render();
+            function checkEventsDates(date){
+                allEvents.forEach(element => {
+                    if (element.start == date) {
+                        flag = true;
+                    }
+                });
+            }
         });
     </script>
     <!-- Button trigger modal -->
