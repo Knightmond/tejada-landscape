@@ -1,4 +1,23 @@
 <section id="contact" class="tm-section-pad-top tm-parallax-2">
+    <script>
+        let dates = @js($dates);
+        var allEvents = []
+        dates.forEach(element => {
+            allEvents.push({
+                "title":"Booked",
+                "start":element.startDate,
+                "color":"black"
+            })
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                events: allEvents
+            });
+            calendar.render();
+        });
+    </script>
 
     <div class="container tm-container-contact">
 
@@ -9,10 +28,10 @@
             </div>
 
             <div class="col-sm-12 col-md-6" id="calendar">
-                <!--Calendario-->
+                <a class="btn btn-primary" href="{{ route('landscape.appointments') }}">Make an appointment!</a>
             </div>
 
-            <div class="col-sm-12 col-md-6">
+            <div class="col-sm-12 col-md-6 ContactRow">
 
                 <div class="contact-item">
                     <a rel="nofollow" href="mailto:mail@company.com" class="item-link">

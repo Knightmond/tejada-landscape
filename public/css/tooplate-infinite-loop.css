@@ -60,6 +60,7 @@ blockquote {
 .tm-section-about-us {
   padding-top: 320px;
   padding-bottom: 320px;
+  background-color: #a3c6d9;
 }
 .tm-section-staff{
   padding-top: 200px;
@@ -72,11 +73,15 @@ blockquote {
   padding-bottom: 300px;
   padding-left: 150px;
   padding-right: 150px ;
+  background-color: #badbb6;
 }
 .col-padding{
   text-align: center;
   max-width: 340px;
   display: inline-block;
+  text-align: justify;
+  color: dimgray;
+
 }
 
 .tm-content-box {
@@ -360,10 +365,12 @@ blockquote {
 .tm-gallery-container {
   padding-top: 70px;
   padding-bottom: 120px;
+
 }
 
 .tm-gallery-item {
   margin: 0 15px;
+  box-shadow: 5px 10px 8px #888888;
 }
 
 .slick-dots {
@@ -660,7 +667,12 @@ p {
 
   .tm-container-contact {
     max-width: 1063px;
+
   }
+}
+.ContactRow{
+    vertical-align: middle;
+    margin-top: 150px;
 }
 
 @media (max-width: 991px) {

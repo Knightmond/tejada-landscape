@@ -15,11 +15,10 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/tooplate-infinite-loop.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" integrity="sha512-rqQltXRuHxtPWhktpAZxLHUVJ3Eombn3hvk9PHjV/N5DMUYnzKPC1i3ub0mEXgFzsaZNeJcoE0YHq0j/GFsdGg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src='fullcalendar/main.js'></script>
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.min.css">
 
@@ -33,16 +32,7 @@
     <script src="lg-js/plugins/thumbnail/lg-thumbnail.min.js"></script>
     <script src="lg-js/plugins/video/lg-video.min.js"></script>
     <script src="lg-js/plugins/zoom/lg-zoom.min.js"></script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var calendarEl = document.getElementById('calendar');
-            var calendar = new FullCalendar.Calendar(calendarEl, {
-                initialView: 'dayGridMonth'
-            });
-            calendar.render();
-        });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
 
 </head>
 
@@ -86,13 +76,27 @@
     <script src="magnific-popup/jquery.magnific-popup.min.js"></script>
     <script src="js/easing.min.js"></script>
     <script src="js/jquery.singlePageNav.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script>
+        livewire.on("created", function() {
+            deleteFormData();
+            swal({
+                title: "Success",
+                text: "The appointment was created successfully",
+                icon: "success",
+            });
+        });
+
+        function deleteFormData(){
+            document.getElementById("form").reset();
+        }
+    </script>
 </body>
 
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/botman-web-widget@0/build/assets/css/chat.min.css">
+<link rel="stylesheet" type="text/css" href="https://drive.google.com/uc?export=view&id=1E2LypamsdORqOglpAcsGzB9jmMR2T4oY">
 <script>
     var botmanWidget = {
         aboutText: 'Tejada Landscape Inc',
+        title:'Helper',
         introMessage: "✋ Hello!"
     };
 </script>

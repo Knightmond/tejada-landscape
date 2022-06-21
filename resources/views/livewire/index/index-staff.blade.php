@@ -1,6 +1,6 @@
 <section id="staff" class="tm-section-staff tm-parallax-2 ">
-    <h2 class="text-black text-center mb-4 tm-section-title">Meet our staff</h2>
-    <div class="row text-center">
+    <h2 class="tm-text-primary text-center mb-4 tm-section-title">Meet our staff</h2>
+    <div class="row text-center " style="margin-top: 50px">
         <div class="col-sm-4 ">
             <!--la col-->
             <img src="{{ url('storage/img/pfp.png') }}" class="img-fluid mx-auto">
