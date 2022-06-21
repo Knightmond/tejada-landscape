@@ -28,7 +28,7 @@
             </div>
 
             <div class="col-sm-12 col-md-6" id="calendar">
-                <a class="btn btn-primary" href="{{ route('landscape.appointments') }}">Make an appointment!</a>
+                <a class="btn btn-primary" href="{{ route('landscape.appointments') }}"><b style="color: black">Make an appointment!</b></a>
             </div>
 
             <div class="col-sm-12 col-md-6 ContactRow">

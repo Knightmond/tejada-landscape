@@ -1,5 +1,3 @@
-<?php require "3-protect.php" ?>
-
 <div class="container">
     <div class="row mt-5">
         <div class="col-4"></div>

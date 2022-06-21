@@ -100,8 +100,8 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-                    <button type="submit" id="btn" class="btn btn-primary">Make Appointment</button>
+                    <button style="color: black" type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                    <button style="color: black" type="submit" id="btn" class="btn btn-primary">Make Appointment</button>
                 </div>
             </form>
         </div>
