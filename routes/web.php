@@ -15,8 +15,8 @@ Route::match(['get', 'post'], '/botman', [BotManController::class, 'handle']);
 Route::get("/gallery", Gallery::class)->name("landscape.gallery");
 Route::get("/appointment", AppointmentCalendar::class)->name("landscape.appointments");
 
-Route::get("/login", Login::class)->name("landscape.login");
-Route::group(["middleware" => "auth"], function(){
+//Route::get("/login", Login::class)->name("landscape.login");
+//Route::group(["middleware" => "auth"], function(){
     Route::get("/upload", UploadImageController::class)->name("upload.images");
-    Route::get("/logout", Logout::class)->name("landscape.logout");
-});
+    //Route::get("/logout", Logout::class)->name("landscape.logout");
+//});
