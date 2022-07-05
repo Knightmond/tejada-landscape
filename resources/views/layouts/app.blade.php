@@ -111,9 +111,11 @@
 <link rel="stylesheet" type="text/css" href="https://drive.google.com/uc?export=view&id=1E2LypamsdORqOglpAcsGzB9jmMR2T4oY">
 <script>
     var botmanWidget = {
+        bubbleAvatarUrl: 'https://i.ibb.co/cty3gc5/chat.png',
         aboutText: 'Tejada Landscape Inc',
         title:'Helper',
-        introMessage: "✋ Hello!"
+        introMessage: "✋ Hello!",
+        aboutLink: 'https://www.youtube.com/watch?v=iik25wqIuFo'
     };
 </script>
 
