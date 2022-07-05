@@ -25,17 +25,15 @@ class AppointmentCalendar extends Component
 
     public function pushAppointment(){
         $this->validate();
-        $this->appointment->startDate = $this->calendarDate;
-        $dateTime = $this->appointment->startDate."T".$this->appointment->startTime;
-        $this->appointment->startDateTime = Carbon::create($dateTime, "GMT-07:00");
+        $this->appointment->startDate = Carbon::create($this->calendarDate, "GMT-07:00");
         $this->appointment->description = $this->appointment->description.". My contact: ".$this->appointment->email.", ".$this->appointment->phone;
         $this->appointment->save();
         Event::create([
             'name' => $this->appointment->name,
             'description' => $this->appointment->description,
             'location' => $this->appointment->location,
-            'startDateTime' => $this->appointment->startDateTime,
-            'endDateTime' => $this->appointment->startDateTime,
+            'startDate' => $this->appointment->startDate,
+            'endDate' => $this->appointment->startDate,
         ]);
         $this->mount();
         $this->emit("created");

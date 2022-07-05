@@ -14,6 +14,7 @@
             var calendarEl = document.getElementById('calendar');
             var calendar = new FullCalendar.Calendar(calendarEl, {
                 initialView: 'dayGridMonth',
+                hiddenDays:[0],
                 dateClick: function(info){
                     flag = false
                     let d = new Date().setHours(0,0,0,0);
@@ -69,16 +70,6 @@
                             <label for="location">Location *</label>
                             <input class="form-control" id="location" wire:model="appointment.location" type="text" placeholder="Location">
                             @error('appointment.location') <span class="text-danger">{{ $message }}</span>@enderror
-                        </div>
-                        <div class="col form-group">
-                            <label for="time">Time *</label>
-                            <select class="form-control" id="time" wire:model="appointment.startTime">
-                                <option value="">Select</option>
-                                <option value="08:00">08:00</option>
-                                <option value="13:00">13:00</option>
-                                <option value="18:00">18:00</option>
-                            </select>
-                            @error('appointment.startTime') <span class="text-danger">{{ $message }}</span>@enderror
                         </div>
                     </div>
                     <div class="form-group">

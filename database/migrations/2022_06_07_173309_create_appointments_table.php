@@ -19,8 +19,6 @@ return new class extends Migration
             $table->string("description");
             $table->string("location");
             $table->date("startDate");
-            $table->string("startTime");
-            $table->dateTime("startDateTime");
             $table->string("email");
             $table->string("phone");
             $table->timestamps();
