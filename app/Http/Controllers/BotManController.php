@@ -75,7 +75,7 @@ class BotManController extends Controller
             } elseif ($message == 'Apointment') {
                 $this->booking($botman);
             }elseif ($message == 'Help') {
-                $botman->reply("Send price to ask for our prices. \nSend services to learn about our current services. \nSend location to learn about our location.\nSend who are you? to learn about us and our history. \nSend booking to learn how to book an appointment with us.");
+                $botman->reply("Send price to ask for our prices. <br>Send services to learn about our current services. <br>Send location to learn about our location.<br>Send who are you? to learn about us and our history. <br>Send booking to learn how to book an appointment with us.");
 
 
             // minusculas
@@ -128,14 +128,8 @@ class BotManController extends Controller
                 $this->booking($botman);
             } elseif ($message == 'apointment') {
                 $this->booking($botman);
-
-            } elseif ($message == 'genshin') {
-                $this->genshin($botman);
-            } elseif ($message == 'Genshin') {
-                $this->genshin($botman);
-                
             }elseif ($message == 'help') {
-                $botman->reply("Send price to ask for our prices. \nSend services to learn about our current services. \nSend location to learn about our location.\nSend who are you? to learn about us and our history. \nSend booking to learn how to book an appointment with us.");
+                $botman->reply("Send price to ask for our prices. <br>Send services to learn about our current services. <br>Send location to learn about our location.<br>Send who are you? to learn about us and our history. <br>Send booking to learn how to book an appointment with us.");
             } else {
                 $botman->reply("Sorry. I couldn't understand you. If you need help just send me a message saying 'help'!");
             }
@@ -159,22 +153,18 @@ class BotManController extends Controller
 
     public function price($botman)
     {
-        $botman->reply("Here are our current pricings!\nLandscaping/Hardscaping : XX.XX$\nDeep cleaning services : XX.XX$\nGardening : XX.XX$\n \nPlease note that this prices are the baseline and they may increase according to the size and complexity of the project. Final prices will be given upon meeting.");
+        $botman->reply("Here are our current pricings!<br>Landscaping/Hardscaping : XX.XX$<br>Deep cleaning services : XX.XX$<br>Gardening : XX.XX$<br> <br>Please note that this prices are the baseline and they may increase according to the size and complexity of the project. Final prices will be given upon meeting.");
     }
 
     public function services($botman)
     {
-        $botman->reply("The current services that we offer are:\nLandscaping\nHardscaping\nDeep cleaning\n\n");
+        $botman->reply("The current services that we offer are:<br>Landscaping<br>Hardscaping<br>Deep cleaning<br><br>");
     }
 
-    public function genshin($botman)
-    {
-        $botman->reply("pogger impact XD test test <br> https://www.youtube.com/watch?v=dQw4w9WgXcQ <br> https://www.youtube.com/watch?v=dQw4w9WgXcQ");
-    }
 
     public function location($botman)
     {
-        $botman->reply("Our current location is: \nlmao idk plz help me");
+        $botman->reply("Our current location is: <br>lmao idk plz help me");
     }
 
     public function history($botman)
