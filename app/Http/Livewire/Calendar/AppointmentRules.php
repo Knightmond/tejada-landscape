@@ -7,7 +7,6 @@ class AppointmentRules {
         return [
             "appointment.name" => "required|string",
             "appointment.description" => "nullable|string",
-            "appointment.startTime" => "required|string",
             "appointment.location" => "required|string",
             "appointment.email" => "required|email",
             "appointment.phone" => "nullable|string|min:10"

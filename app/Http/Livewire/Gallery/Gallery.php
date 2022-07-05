@@ -9,7 +9,7 @@ class Gallery extends Component
 {
     public function render()
     {
-        $photos = Photo::all();
+        $photos = Photo::all()->where("active","=","1");
         return view('livewire.gallery.gallery',compact("photos"));
     }
 }

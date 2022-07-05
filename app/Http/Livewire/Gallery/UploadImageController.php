@@ -6,6 +6,7 @@ use Livewire\Component;
 use App\Models\Photo;
 use Illuminate\Support\Facades\Storage;
 use Livewire\WithFileUploads;
+use Illuminate\Support\Facades\Auth;
 
 class UploadImageController extends Component
 {
@@ -31,6 +32,12 @@ class UploadImageController extends Component
         $this->data->picture = Storage::disk("public")->put("img", $this->picture);
         $this->data->save();
         $this->mount();
+    }
+
+    public function logout()
+    {
+        Auth::logout();
+        return redirect(route("login"));
     }
 
 }

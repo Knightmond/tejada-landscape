@@ -11,7 +11,7 @@ class Index extends Component
     public $dates;
     public function render()
     {
-        $photos = Photo::all();
+        $photos = Photo::all()->where("active","=","1");
         $this->dates = Appointment::all(["startDate"]);
         return view('livewire.index.index',compact("photos"));
     }
