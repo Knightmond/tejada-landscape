@@ -17,10 +17,10 @@
                     </div>
                     <div class="row">
                         <div class="col">
-                            <button type="submit" class="btn btn-primary">Sign In</button>
+                            <button style="color:black; padding-left:60px;padding-right:60px;" type="submit" class="btn btn-primary">Sign In</button>
                         </div>
                         <div class="col">
-                            <a style="padding-left:20px;padding-right:20px;" href="{{route("landscape.index")}}" class="btn btn-secondary">Back</a>
+                            <a style="color:black; padding-left:20px;padding-right:20px;" href="{{route("landscape.index")}}" class="btn btn-secondary">Back</a>
                         </div>
                     </div>
                 </form>

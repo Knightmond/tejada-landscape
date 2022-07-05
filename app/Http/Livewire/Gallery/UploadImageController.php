@@ -31,6 +31,7 @@ class UploadImageController extends Component
         ]);
         $this->data->picture = Storage::disk("public")->put("img", $this->picture);
         $this->data->save();
+        $this->emit("uploaded");
         $this->mount();
     }
 

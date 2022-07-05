@@ -80,8 +80,24 @@
         livewire.on("created", function() {
             deleteFormData();
             swal({
-                title: "Success",
+                title: "success",
                 text: "The appointment was created successfully",
+                icon: "success",
+            });
+        });
+        livewire.on("failure", function() {
+            deleteFormData();
+            swal({
+                title: "error",
+                text: "The appointment was created successfully",
+                icon: "success",
+            });
+        });
+        livewire.on("uploaded", function() {
+            deleteFormData();
+            swal({
+                title: "Success",
+                text: "Image Uploaded",
                 icon: "success",
             });
         });

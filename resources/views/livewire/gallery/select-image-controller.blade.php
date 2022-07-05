@@ -10,9 +10,9 @@
                         <div class="card-body text-center">
                             <a href="{{ route("edit.images", $photo) }}" title="Show/Hide Image"><i style="font-size: 23px" class="fa fa-edit"></i></a>
                             @if ($photo->active)
-                                <h6>Active</h6>
+                                <h5 style="color: #198754;">Active</h5>
                             @else
-                                <h6>Inactive</h6>
+                                <h5 style="color: #dc3545;">Inactive</h5>
                             @endif
                         </div>
                     </div>
